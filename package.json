@@ -4,6 +4,7 @@
   "private": true,
   "homepage": "http://angwhen.github.io/design-trends-site",
   "dependencies": {
+    "eslint-utils": "^1.4.2",
     "papaparse": "^5.0.2",
     "react": "^16.9.0",
     "react-csv-reader": "^1.3.1",
