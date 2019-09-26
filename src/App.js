@@ -14,7 +14,7 @@ class App extends Component {
           <ul className="navbar-nav mr-auto">
             <li><Link to={'/'} className="nav-link"> Historical Fashion Images Slideshow </Link></li>
             <li><Link to={'/contact'} className="nav-link">Word Frequencies Over Time in NYTimes</Link></li>
-            <li><Link to={'/about'} className="nav-link">About</Link></li>
+            <li><Link to={'/about'} className="nav-link">Historical Colors in Fashion Images People</Link></li>
           </ul>
           </nav>
           <hr />

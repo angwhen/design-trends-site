@@ -13,10 +13,18 @@ const Slide = ({ image }) => {
     backgroundRepeat: 'no-repeat',
     backgroundPosition: '50% 60%',
     display: 'inline-block',
-    height: '100%',
+    height: '50%',
     width: '100%'
   }
-
+  const styles2 = {
+    backgroundImage: `url(${image[1]})`,
+    backgroundSize: 'cover',
+    backgroundRepeat: 'no-repeat',
+    backgroundPosition: '50% 60%',
+    display: 'inline-block',
+    height: '50%',
+    width: '100%'
+  }
 
   const whiteStyles = {
     backgroundColor:'#ffffff'
@@ -24,8 +32,9 @@ const Slide = ({ image }) => {
 
   return(
     <div style={wrapperStyles}>
-      <div style={whiteStyles}>{image[1]}</div>
+      <div style={whiteStyles}>{image[2]}</div>
       <div className="slide" style={styles}></div>
+      <div className="slide" style={styles2}></div>
       </div>
     )
 }
