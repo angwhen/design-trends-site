@@ -1,10 +1,13 @@
 import React, { Component } from 'react';
 import { BrowserRouter as Router, Switch, Route, Link } from 'react-router-dom';
 import AllFlickrSlideshow from './components/AllFlickrSlideshow';
-import About from './components/About';
+import ColorsPage from './components/ColorsPage';
 import Contact from './components/Contact';
 
 class App extends Component {
+  componentDidMount() {
+  document.title = 'Design Trends';
+}
   render() {
     return (
     <Router>
@@ -14,14 +17,14 @@ class App extends Component {
           <ul className="navbar-nav mr-auto">
             <li><Link to={'/'} className="nav-link"> Historical Fashion Images Slideshow </Link></li>
             <li><Link to={'/contact'} className="nav-link">Word Frequencies Over Time in NYTimes</Link></li>
-            <li><Link to={'/about'} className="nav-link">Historical Colors in Fashion Images People</Link></li>
+            <li><Link to={'/colors'} className="nav-link">Historical Colors in Fashion Images People</Link></li>
           </ul>
           </nav>
           <hr />
           <Switch>
               <Route exact path='/' component={AllFlickrSlideshow} />
               <Route path='/contact' component={Contact} />
-              <Route path='/about' component={About} />
+              <Route path='/colors' component={ColorsPage} />
           </Switch>
         </div>
       </Router>

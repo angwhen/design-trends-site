@@ -1546,14 +1546,14 @@ createAllSlides = () => {
       allSlides.push(  <div  style ={ {
         backgroundSize: 'cover',
         backgroundRepeat: 'no-repeat',
-        backgroundPosition: '50% 60%',
+        backgroundPosition: '50% 50%',
           display: 'inline-block',
           height: '100%',
           width: '100%',
-          width: '400px',
-          margin: '0 auto',
-          height: '800px',
+          height: '400px',
           overflow: 'hidden',
+          justifyContent: 'center',
+          textAlign: 'center'
         }
       }><Slide image={this.state.images[i]} /></div>)
     }
@@ -1561,33 +1561,12 @@ createAllSlides = () => {
   }
 
 render() {
-  const responsive = {
-  desktop: {
-    breakpoint: { max: 3000, min: 1024 },
-    items: 4,
-    slidesToSlide: 1, // optional, default to 1.
-  },
-  tablet: {
-    breakpoint: { max: 1024, min: 464 },
-    items: 2,
-    slidesToSlide: 1, // optional, default to 1.
-  },
-  mobile: {
-    breakpoint: { max: 464, min: 0 },
-    items: 1,
-    slidesToSlide: 1, // optional, default to 1.
-  },
-};
-
   return (
-
-<Carousel
-  responsive={responsive}
->
-
-{this.createAllSlides()}
-
-</Carousel>
+  <div style ={ {
+    justifyContent: 'center'
+  } }>
+    {this.createAllSlides()}
+  </div>
   );
 }
 

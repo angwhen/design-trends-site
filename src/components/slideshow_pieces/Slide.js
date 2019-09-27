@@ -1,10 +1,10 @@
 import React from 'react'
+import LazyLoad from 'react-lazyload';
 
 const Slide = ({ image }) => {
   const wrapperStyles = {
-    backgroundPosition: '50% 60%',
     height: '100%',
-    width: '100%'
+    width: '100%',
   }
 
   const styles = {
@@ -13,8 +13,8 @@ const Slide = ({ image }) => {
     backgroundRepeat: 'no-repeat',
     backgroundPosition: '50% 60%',
     display: 'inline-block',
-    height: '50%',
-    width: '100%'
+    height: '400px',
+    width: '400px'
   }
   const styles2 = {
     backgroundImage: `url(${image[1]})`,
@@ -22,8 +22,8 @@ const Slide = ({ image }) => {
     backgroundRepeat: 'no-repeat',
     backgroundPosition: '50% 60%',
     display: 'inline-block',
-    height: '50%',
-    width: '100%'
+    height: '400px',
+    width: '400px'
   }
 
   const whiteStyles = {
@@ -32,10 +32,14 @@ const Slide = ({ image }) => {
 
   return(
     <div style={wrapperStyles}>
+      <LazyLoad once='true'>
       <div style={whiteStyles}>{image[2]}</div>
       <div className="slide" style={styles}></div>
+      <div style={{width: '10px',   display: 'inline-block',}}></div>
       <div className="slide" style={styles2}></div>
+        </LazyLoad>
       </div>
+
     )
 }
 
