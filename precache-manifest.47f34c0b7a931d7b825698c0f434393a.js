@@ -1,19 +1,19 @@
 self.__precacheManifest = (self.__precacheManifest || []).concat([
   {
-    "revision": "720a94c3556ccd9d7e8261d2c1701d25",
+    "revision": "b7a72e125bef5b7413dbd470c2f7060d",
     "url": "/design-trends-site/index.html"
   },
   {
-    "revision": "eef75e6a62156bd79142",
-    "url": "/design-trends-site/static/css/2.fdd1b033.chunk.css"
+    "revision": "ef6ff1f0c5fa1f31ce7b",
+    "url": "/design-trends-site/static/css/2.3735c94c.chunk.css"
   },
   {
-    "revision": "eef75e6a62156bd79142",
-    "url": "/design-trends-site/static/js/2.e4e10f26.chunk.js"
+    "revision": "ef6ff1f0c5fa1f31ce7b",
+    "url": "/design-trends-site/static/js/2.ecaa561e.chunk.js"
   },
   {
-    "revision": "73df622b12e9a3d8373a",
-    "url": "/design-trends-site/static/js/main.e9644310.chunk.js"
+    "revision": "f9f670be0161975e417a",
+    "url": "/design-trends-site/static/js/main.3dd7d615.chunk.js"
   },
   {
     "revision": "23a77ca2552fa684fbb5",
