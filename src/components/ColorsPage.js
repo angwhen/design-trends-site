@@ -1,8 +1,5 @@
 //https://medium.com/@ItsMeDannyZ/build-an-image-slider-with-react-es6-264368de68e4
 import React, { Component } from 'react';
-import ReactDOM from 'react-dom';
-import Slide from './slideshow_pieces/Slide';
-import ColorToggle from './color_helpers/ColorToggle';
 import Carousel from 'react-multi-carousel';
 import 'react-multi-carousel/lib/styles.css';
 //https://www.npmjs.com/package/react-multi-carousel
