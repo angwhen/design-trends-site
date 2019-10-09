@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import { BrowserRouter as Router, Switch, Route, Link } from 'react-router-dom';
-import AllFlickrSlideshow from './components/AllFlickrSlideshow';
+//import AllFlickrSlideshow from './components/AllFlickrSlideshow';
+import ColorClusteredPage from './components/ColorClusteredPage';
 import ColorsPage from './components/ColorsPage';
 import ColorsTrends from './components/ColorsTrends';
 import WordsPage from './components/WordsPage';
@@ -16,7 +17,7 @@ class App extends Component {
           <h2>Design Trends Over Time</h2>
           <nav className="navbar navbar-expand-lg navbar-light bg-light">
           <ul className="navbar-nav mr-auto">
-            <li><Link to={'/slideshow'} className="nav-link"> Historical Fashion Images Slideshow </Link></li>
+            <li><Link to={'/colorclustered'} className="nav-link"> Color Clustering </Link></li>
             <li><Link to={'/words'} className="nav-link">Word Frequencies Over Time in NYTimes</Link></li>
             <li><Link to={'/colors'} className="nav-link">Colors Grids</Link></li>
             <li><Link to={'/colors-trends'} className="nav-link">Colors Trends</Link></li>
@@ -25,7 +26,7 @@ class App extends Component {
           <hr />
           <Switch>
               <Route exact path='/' component={ColorsPage} />
-              <Route path='/slideshow' component={AllFlickrSlideshow} />
+              <Route path='/colorclustered' component={ColorClusteredPage} />
               <Route path='/words' component={WordsPage} />
               <Route path='/colors' component={ColorsPage} />
                 <Route path='/colors-trends' component={ColorsTrends} />
