@@ -1,16 +1,16 @@
 {
   "files": {
-    "main.js": "/design-trends-site/static/js/main.6e8e48a3.chunk.js",
-    "main.js.map": "/design-trends-site/static/js/main.6e8e48a3.chunk.js.map",
+    "main.js": "/design-trends-site/static/js/main.05fd1734.chunk.js",
+    "main.js.map": "/design-trends-site/static/js/main.05fd1734.chunk.js.map",
     "runtime~main.js": "/design-trends-site/static/js/runtime~main.62919d4f.js",
     "runtime~main.js.map": "/design-trends-site/static/js/runtime~main.62919d4f.js.map",
-    "static/css/2.fa322b88.chunk.css": "/design-trends-site/static/css/2.fa322b88.chunk.css",
-    "static/js/2.9ef54879.chunk.js": "/design-trends-site/static/js/2.9ef54879.chunk.js",
-    "static/js/2.9ef54879.chunk.js.map": "/design-trends-site/static/js/2.9ef54879.chunk.js.map",
+    "static/css/2.bcc2c170.chunk.css": "/design-trends-site/static/css/2.bcc2c170.chunk.css",
+    "static/js/2.1470a02f.chunk.js": "/design-trends-site/static/js/2.1470a02f.chunk.js",
+    "static/js/2.1470a02f.chunk.js.map": "/design-trends-site/static/js/2.1470a02f.chunk.js.map",
     "index.html": "/design-trends-site/index.html",
-    "precache-manifest.85b230ecbcc7616c38c676e553b39865.js": "/design-trends-site/precache-manifest.85b230ecbcc7616c38c676e553b39865.js",
+    "precache-manifest.e4b5f2390f236aacd7e960babf8cc24d.js": "/design-trends-site/precache-manifest.e4b5f2390f236aacd7e960babf8cc24d.js",
     "service-worker.js": "/design-trends-site/service-worker.js",
-    "static/css/2.fa322b88.chunk.css.map": "/design-trends-site/static/css/2.fa322b88.chunk.css.map",
+    "static/css/2.bcc2c170.chunk.css.map": "/design-trends-site/static/css/2.bcc2c170.chunk.css.map",
     "static/media/styles.css": "/design-trends-site/static/media/revicons.2feb69cc.eot"
   }
 }
