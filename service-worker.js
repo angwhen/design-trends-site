@@ -14,7 +14,7 @@
 importScripts("https://storage.googleapis.com/workbox-cdn/releases/4.3.1/workbox-sw.js");
 
 importScripts(
-  "/design-trends-site/precache-manifest.8c071818dbabb5863ca8acc78d130b29.js"
+  "/design-trends-site/precache-manifest.6226f17e7246c930f7acf32d6e951ec2.js"
 );
 
 self.addEventListener('message', (event) => {
