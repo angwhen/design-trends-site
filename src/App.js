@@ -5,6 +5,7 @@ import ColorClusteredPage from './components/ColorClusteredPage';
 import ColorsPage from './components/ColorsPage';
 import ColorsTrends from './components/ColorsTrends';
 import WordsPage from './components/WordsPage';
+import FashionTermsGraph from './components/FashionTermsGraph';
 
 class App extends Component {
   componentDidMount() {
@@ -18,9 +19,10 @@ class App extends Component {
           <nav className="navbar navbar-expand-lg navbar-light bg-light">
           <ul className="navbar-nav mr-auto">
             <li><Link to={'/colorclustered'} className="nav-link"> Color Clustering </Link></li>
-            <li><Link to={'/words'} className="nav-link">Word Frequencies Over Time in NYTimes</Link></li>
+            <li><Link to={'/words'} className="nav-link">Word Clouds</Link></li>
             <li><Link to={'/colors'} className="nav-link">Colors Grids</Link></li>
             <li><Link to={'/colors-trends'} className="nav-link">Colors Trends</Link></li>
+            <li><Link to={'/fashion-terms'} className="nav-link">Fashion Terms Graph</Link></li>
           </ul>
           </nav>
           <hr />
@@ -29,7 +31,8 @@ class App extends Component {
               <Route path='/colorclustered' component={ColorClusteredPage} />
               <Route path='/words' component={WordsPage} />
               <Route path='/colors' component={ColorsPage} />
-                <Route path='/colors-trends' component={ColorsTrends} />
+              <Route path='/colors-trends' component={ColorsTrends} />
+              <Route path='/fashion-terms' component={FashionTermsGraph} />
           </Switch>
         </div>
       </Router>
