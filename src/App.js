@@ -6,6 +6,8 @@ import ColorsPage from './components/ColorsPage';
 import ColorsTrends from './components/ColorsTrends';
 import WordsPage from './components/WordsPage';
 import FashionTermsGraph from './components/FashionTermsGraph';
+import MonochromeIdentification from './components/MonochromeIdentification';
+import ClusterAreaCharts from './components/ClusterAreaCharts';
 
 class App extends Component {
   componentDidMount() {
@@ -15,14 +17,15 @@ class App extends Component {
     return (
     <Router>
         <div>
-          <h2>Design Trends Over Time</h2>
           <nav className="navbar navbar-expand-lg navbar-light bg-light">
           <ul className="navbar-nav mr-auto">
             <li><Link to={'/colorclustered'} className="nav-link"> Color Clustering </Link></li>
-            <li><Link to={'/words'} className="nav-link">Word Clouds</Link></li>
             <li><Link to={'/colors'} className="nav-link">Colors Grids</Link></li>
             <li><Link to={'/colors-trends'} className="nav-link">Colors Trends</Link></li>
-            <li><Link to={'/fashion-terms'} className="nav-link">Fashion Terms Graph</Link></li>
+            <li><Link to={'/monochrome_id'} className="nav-link">Monochrome Identification</Link></li>
+            <li><Link to={'/words'} className="nav-link">Word Clouds</Link></li>
+            <li><Link to={'/fashion-terms'} className="nav-link">Fashion Terms</Link></li>
+            <li><Link to={'/cluster-comparisons'} className="nav-link">Cluster Comparisons</Link></li>
           </ul>
           </nav>
           <hr />
@@ -31,8 +34,10 @@ class App extends Component {
               <Route path='/colorclustered' component={ColorClusteredPage} />
               <Route path='/words' component={WordsPage} />
               <Route path='/colors' component={ColorsPage} />
+              <Route path='/monochrome_id' component={MonochromeIdentification} />
               <Route path='/colors-trends' component={ColorsTrends} />
               <Route path='/fashion-terms' component={FashionTermsGraph} />
+              <Route path='/cluster-comparisons' component={ClusterAreaCharts} />
           </Switch>
         </div>
       </Router>
