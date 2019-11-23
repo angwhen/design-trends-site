@@ -4,7 +4,8 @@ import randomColor from 'randomcolor';
 import InputRange from 'react-input-range';
 import 'react-input-range/lib/css/index.css';
 import { makeYearlyLocationsData } from "./WordCloudHelpers";
-
+import ButtonToolbar from 'react-bootstrap/ButtonToolbar';
+import Button from 'react-bootstrap/Button';
 //https://www.npmjs.com/package/react-multi-carousel
 
 
@@ -460,18 +461,21 @@ createWordCloud = () => {
   return allWords
 }
 
-toggleSource = () => {
-  this.setState(prevState => ({
-    currentCloud: (prevState.currentCloud+1)%3
-  }));
-}
 
+onClickFunc= (whichChart) => {
+  this.setState(prevState => ({
+    currentCloud: whichChart
+  }));
+  }
 render() {
 
 return (
   <div style={{width:'100%', height:'100%'}}>
-  <button onClick={this.toggleSource}> {this.state.currentCloud === 0 ? "Show Google N-gram data" : this.state.currentCloud === 1 ? "Show locations": "Show NYTimes Data "}</button>
-
+  <ButtonToolbar style = {{justifyContent: 'center'}}>
+  <Button variant="outline-primary" onClick={() => this.onClickFunc(0)}>NYTimes Fashion Words</Button>
+  <Button variant="outline-primary" onClick={() => this.onClickFunc(1)}>Google Ngram Fashion Words</Button>
+  <Button variant="outline-primary"onClick={() => this.onClickFunc(2)}>Location Extracted From NYTimes</Button>
+  </ButtonToolbar>
 <p></p>
     <center>
     <div style={{width:'90%'}}>

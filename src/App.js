@@ -7,7 +7,9 @@ import ColorsTrends from './components/ColorsTrends';
 import WordsPage from './components/WordsPage';
 import FashionTermsGraph from './components/FashionTermsGraph';
 import MonochromeIdentification from './components/MonochromeIdentification';
+import PredomFacesIdentification from './components/PredomFacesIdentification';
 import ClusterAreaCharts from './components/ClusterAreaCharts';
+import SkinRemoval from './components/SkinRemoval';
 
 class App extends Component {
   componentDidMount() {
@@ -22,7 +24,6 @@ class App extends Component {
             <li><Link to={'/colorclustered'} className="nav-link"> Color Clustering </Link></li>
             <li><Link to={'/colors'} className="nav-link">Colors Grids</Link></li>
             <li><Link to={'/colors-trends'} className="nav-link">Colors Trends</Link></li>
-            <li><Link to={'/monochrome_id'} className="nav-link">Monochrome Identification</Link></li>
             <li><Link to={'/words'} className="nav-link">Word Clouds</Link></li>
             <li><Link to={'/fashion-terms'} className="nav-link">Fashion Terms</Link></li>
             <li><Link to={'/cluster-comparisons'} className="nav-link">Cluster Comparisons</Link></li>
@@ -35,6 +36,8 @@ class App extends Component {
               <Route path='/words' component={WordsPage} />
               <Route path='/colors' component={ColorsPage} />
               <Route path='/monochrome_id' component={MonochromeIdentification} />
+                <Route path='/predomfaces_id' component={PredomFacesIdentification} />
+              <Route path='/skin_removal' component={SkinRemoval} />
               <Route path='/colors-trends' component={ColorsTrends} />
               <Route path='/fashion-terms' component={FashionTermsGraph} />
               <Route path='/cluster-comparisons' component={ClusterAreaCharts} />
