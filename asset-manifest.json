@@ -1,14 +1,14 @@
 {
   "files": {
-    "main.js": "/design-trends-site/static/js/main.c8f1f2a1.chunk.js",
-    "main.js.map": "/design-trends-site/static/js/main.c8f1f2a1.chunk.js.map",
-    "runtime~main.js": "/design-trends-site/static/js/runtime~main.8572e9bc.js",
-    "runtime~main.js.map": "/design-trends-site/static/js/runtime~main.8572e9bc.js.map",
+    "main.js": "/design-trends-site/static/js/main.c9ecb1dc.chunk.js",
+    "main.js.map": "/design-trends-site/static/js/main.c9ecb1dc.chunk.js.map",
+    "runtime~main.js": "/design-trends-site/static/js/runtime~main.62919d4f.js",
+    "runtime~main.js.map": "/design-trends-site/static/js/runtime~main.62919d4f.js.map",
     "static/css/2.bcc61312.chunk.css": "/design-trends-site/static/css/2.bcc61312.chunk.css",
-    "static/js/2.249ba009.chunk.js": "/design-trends-site/static/js/2.249ba009.chunk.js",
-    "static/js/2.249ba009.chunk.js.map": "/design-trends-site/static/js/2.249ba009.chunk.js.map",
+    "static/js/2.fce2e0a9.chunk.js": "/design-trends-site/static/js/2.fce2e0a9.chunk.js",
+    "static/js/2.fce2e0a9.chunk.js.map": "/design-trends-site/static/js/2.fce2e0a9.chunk.js.map",
     "index.html": "/design-trends-site/index.html",
-    "precache-manifest.b608475fb2814947ddd588f7c9b53067.js": "/design-trends-site/precache-manifest.b608475fb2814947ddd588f7c9b53067.js",
+    "precache-manifest.4f42e7989c365a6bbedc39c1b699e964.js": "/design-trends-site/precache-manifest.4f42e7989c365a6bbedc39c1b699e964.js",
     "service-worker.js": "/design-trends-site/service-worker.js",
     "static/css/2.bcc61312.chunk.css.map": "/design-trends-site/static/css/2.bcc61312.chunk.css.map",
     "static/media/styles.css": "/design-trends-site/static/media/revicons.2feb69cc.eot"
