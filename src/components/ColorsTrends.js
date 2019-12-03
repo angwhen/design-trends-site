@@ -1,5 +1,7 @@
 import React, { Component } from 'react';
 import { BarChart } from 'react-easy-chart';
+import ButtonToolbar from 'react-bootstrap/ButtonToolbar';
+import Button from 'react-bootstrap/Button';
 
 class ColorsTrends extends Component {
   constructor(props) {
@@ -836,13 +838,24 @@ toggleChart = () => {
     currentChartNum: (prevState.currentChartNum+1)%6
   }));
 }
+createDescription = () => {
+  let description = []
+  description.push(<center ><div style = {{width:'60%'}}><p>
+      This page shows how aspects of color in clothing vary over time. I included, the Red,
+      Green and Blue, in the RGB representation of color, and the Hue, Saturation and
+      Value aspects of the HSV representation of
+      color.
+  </p></div></center>);
+  return description;
+}
 render() {
-
-
   return (
     <div>
-      <button onClick={this.toggleChart}> Toggle Chart </button>
-  {this.createCorrectBarChart()}
+      {this.createDescription()}
+      <ButtonToolbar style = {{justifyContent: 'left', padding:'10px'}}>
+        <Button  variant="outline-primary"  onClick={this.toggleChart}> Toggle Chart </Button>
+      </ButtonToolbar>
+      {this.createCorrectBarChart()}
     </div>
   );
 

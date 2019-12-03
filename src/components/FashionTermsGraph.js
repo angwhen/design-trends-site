@@ -1,7 +1,10 @@
 import { Graph } from "react-d3-graph";
 import React, { Component } from 'react';
 import { makeData, makeCooccurData , makeRelatedAdjs, makeRelatedCities } from "./FashionTermScoresUtils";
-
+import 'bootstrap/dist/css/bootstrap.min.css';
+import { Link } from 'react-router-dom';
+import ButtonToolbar from 'react-bootstrap/ButtonToolbar';
+import Button from 'react-bootstrap/Button';
 // Import React Table
 import ReactTable from "react-table";
 import "react-table/react-table.css";
@@ -115,21 +118,37 @@ currentChartNum: 1}
   }//end if staet 1
     return code;
   }
+
+  createDescription = () => {
+    let description = []
+    description.push(<center ><div style = {{width:'60%'}}><p>
+        This page shows all the fashion nouns I am using in my word clouds.
+        I made a graph where the nodes are fashion terms, and the edges are
+        weighted by how often fashion terms co-occur in the same NYTimes article.
+        I see that the most typical fashion terms tend to have the highest measures of
+        centrality in this graph. I originally found some less fashion related terms
+        (such as names of modern brands that are not being talked about in fashion contexts)
+        had the lowest centralities, so I used that as a heuristic to find bad fashion terms
+        to manually remove. However, there were some exceptions. For example "albatross" had
+        very high centrality, on both degree and eigenvalue measures. But I found it was showing
+        up most often with words like "vent", "tie", and "hem" ... which have multiple meanings.
+        That inspired me to change my direction from using fashion terms as terms to using them
+        as only nouns. To use this page try to click on some different fashion nouns,
+         and see what other nouns and cities they co-occur with, and to see what adjectives are used to
+         describe them in the NYTimes.
+    </p></div></center>);
+    return description;
+  }
   render() {
-
-
-
-
-
-
-
-return (
-  <div>
-  <button onClick={this.toggleChart}> Toggle Chart </button>
-{this.createCorrectGraph()}
-</div>
-
-);
-}
+    return (
+      <div>
+          {this.createDescription()}
+          <ButtonToolbar style = {{justifyContent: 'left', padding:'10px'}}>
+            <Button  variant="outline-primary"  onClick={this.toggleChart}> Toggle Chart </Button>
+          </ButtonToolbar>
+          {this.createCorrectGraph()}
+      </div>
+    );
+  }
 }
 export default FashionTermsGraph;

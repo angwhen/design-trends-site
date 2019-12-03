@@ -6,6 +6,7 @@ import 'react-input-range/lib/css/index.css';
 import { makeYearlyLocationsData } from "./WordCloudHelpers";
 import ButtonToolbar from 'react-bootstrap/ButtonToolbar';
 import Button from 'react-bootstrap/Button';
+import { BrowserRouter as Router, Switch, Route, Link } from 'react-router-dom';
 //https://www.npmjs.com/package/react-multi-carousel
 
 
@@ -466,42 +467,68 @@ onClickFunc= (whichChart) => {
   this.setState(prevState => ({
     currentCloud: whichChart
   }));
+}
+createDescription = () => {
+  let description = []
+  if (this.state.currentCloud == 0){
+    description.push(<center ><div style = {{width:'50%'}}><p>
+      I extract all <Link to={'/fashion-terms'}  style = {{display:"inline-block"}}>fashion nouns</Link> I find in the NY Times free
+      historical archive data, along with their associated years. You can see the most common fashion terms used in the NYTimes
+      for each year by dragging the year slider.
+    </p></div></center>);
+  } else if (this.state.currentCloud == 1) {
+    description.push(<center ><div style = {{width:'50%'}}><p>
+    I also query google N-gram for the same <Link to={'/fashion-terms'} style = {{display:"inline-block"}}>fashion nouns </Link> and
+    show the word clouds for their frequency below. It looks like the datasets used by Google N-gram use pretty different
+    fashion nouns than the NYTimes. I wonder if the word cloud for Google N-gram would look more similar to the NYTimes word cloud
+    if I had access to the full texts in the NYTimes.
+    </p></div></center>);
+  } else {
+    description.push(<center ><div style = {{width:'50%'}}><p>
+        I was also curious about popular locations associated with fashion, so I extracted locations using the GeoText library
+        from the articles I determined to be about fashion. I expected to see a lot of Paris and New York, but there is actually
+        a wide variety of locations mentioned in articles that mention clothing/fashion.
+    </p></div></center>);
   }
+  return description
+}
 render() {
 
 return (
   <div style={{width:'100%', height:'100%'}}>
-  <ButtonToolbar style = {{justifyContent: 'center'}}>
-  <Button variant="outline-primary" onClick={() => this.onClickFunc(0)}>NYTimes Fashion Words</Button>
-  <Button variant="outline-primary" onClick={() => this.onClickFunc(1)}>Google Ngram Fashion Words</Button>
-  <Button variant="outline-primary"onClick={() => this.onClickFunc(2)}>Location Extracted From NYTimes</Button>
-  </ButtonToolbar>
-<p></p>
-    <center>
-    <div style={{width:'90%'}}>
-    <InputRange
-            maxValue={2019}
-            minValue={1852}
-            value={this.state.currentYear}
-            onChange={currentYear => this.setState({ currentYear })} />
-    </div>
-    </center>
+    {this.createDescription()}
 
-          <TagCloud
-          className='tag-cloud'
-          style={{
-               fontFamily: 'sans-serif',
-               //fontSize: () => Math.round(Math.random() * 50) + 16,
-               fontSize: 30,
-               color: () => randomColor({
-                 hue: 'blue'
-               }),
-               padding: 5,
-               height: '700px',
-               width:'100%'
-             }}>
-            {this.createWordCloud()}
-           </TagCloud>
+    <ButtonToolbar style = {{justifyContent: 'center'}}>
+    <Button variant="outline-primary" onClick={() => this.onClickFunc(0)}>NYTimes Fashion Words</Button>
+    <Button variant="outline-primary" onClick={() => this.onClickFunc(1)}>Google Ngram Fashion Words</Button>
+    <Button variant="outline-primary"onClick={() => this.onClickFunc(2)}>Location Extracted From NYTimes</Button>
+    </ButtonToolbar>
+    <p></p>
+      <center>
+      <div style={{width:'90%'}}>
+      <InputRange
+              maxValue={2019}
+              minValue={1852}
+              value={this.state.currentYear}
+              onChange={currentYear => this.setState({ currentYear })} />
+      </div>
+      </center>
+
+      <TagCloud
+      className='tag-cloud'
+      style={{
+           fontFamily: 'sans-serif',
+           //fontSize: () => Math.round(Math.random() * 50) + 16,
+           fontSize: 30,
+           color: () => randomColor({
+             hue: 'blue'
+           }),
+           padding: 5,
+           height: '700px',
+           width:'100%'
+         }}>
+        {this.createWordCloud()}
+       </TagCloud>
 
   </div>
   );

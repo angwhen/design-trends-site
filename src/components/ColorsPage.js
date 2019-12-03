@@ -5,6 +5,7 @@ import 'react-multi-carousel/lib/styles.css';
 import ButtonToolbar from 'react-bootstrap/ButtonToolbar';
 import Button from 'react-bootstrap/Button';
 import ColorSlide from './color_helpers/ColorSlide';
+import { Link } from 'react-router-dom';
 //https://www.npmjs.com/package/react-multi-carousel
 
 
@@ -307,6 +308,31 @@ yearly_quantized_colors: [
         return allSlides
       }
 
+      createDescription = () => {
+        let description = []
+        if (this.state.currentChartNum== 0){ //never
+          description.push(<center ><div style = {{width:'60%'}}><p>
+            I extract dominant colors from the pixels in the people in the images for each year in history
+            that I have data for using a modified
+            version of <a href= "https://github.com/fengsp/color-thief-py ">ColorThief </a>.
+            I show the 9 most dominant colors for each year in the grid below. Similar to for clustering,
+            I have options to try to remove
+             the <Link to={'/skin_removal'} >skins in images</Link>, <Link to={'/monochrome_id'} >monochrome images</Link>  and  <Link to={'/predomfaces_id'} >face images</Link> from being used.
+          </p></div></center>);
+        }else{
+          description.push(<center ><div style = {{width:'60%'}}><p>
+            I use color quantization in order to reduce all people pixels in images to a
+            smaller number of distinct colors. I also have the options to Similar to for clustering,
+            I have options to try to prevent
+             the <Link to={'/skin_removal'} >skins in images</Link>, <Link to={'/monochrome_id'} >monochrome images</Link>  and  <Link to={'/predomfaces_id'} >face images</Link> from being used
+             in determining the colors.
+             I then show the proportions of those
+            "representative" colors in each year in the grid below.
+          </p></div></center>);
+        }
+
+        return description;
+      }
     render() {
       const responsive = {
         desktop: { breakpoint: { max: 3000, min: 1024 }, items: 30},
@@ -316,10 +342,11 @@ yearly_quantized_colors: [
 
       return (
         <div>
-        <ButtonToolbar style = {{justifyContent: 'left', padding:'10px'}}>
-        <Button variant="outline-primary" onClick={() => this.onClickFunc(0)}>Dominant Colors</Button>
-        <Button variant="outline-primary" onClick={() => this.onClickFunc(1)}>HSV Cone Quantized Colors</Button>
-        </ButtonToolbar>
+          {this.createDescription()}
+          <ButtonToolbar style = {{justifyContent: 'left', padding:'10px'}}>
+          <Button variant="outline-primary" onClick={() => this.onClickFunc(0)}>Dominant Colors</Button>
+          <Button variant="outline-primary" onClick={() => this.onClickFunc(1)}>HSV Cone Quantized Colors</Button>
+          </ButtonToolbar>
           <Carousel  responsive={responsive} >
             {this.createAllSlides()}
           </Carousel>
